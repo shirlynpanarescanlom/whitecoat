@@ -1,7 +1,0 @@
-{
-  "name": "whitecoat",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "vue-vite"
-}
