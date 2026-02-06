@@ -6,32 +6,30 @@
       </ion-toolbar>
     </ion-header>
     <ion-content :fullscreen="true">
-      <div id="form-container" class="w-full max-w-md my-5 mx-3 md:mx-auto">
-        <p class="text-center">Medical Certificate</p>
-        <p class="text-center">Digital certificate for a patient</p>
-        <form action="" class="mx-2 p-2">
-          <label for="name">Name:</label>
-          <ion-input id="name" name="name" placeholder="Full name"></ion-input>
-
-          <label for="age" class="mt-2">Age:</label>
-          <ion-input id="age" name="age" type="number" placeholder="Age"></ion-input>
-
-          <label for="gender" class="mt-2">Gender:</label>
-          <ion-input id="gender" name="gender" placeholder="Gender"></ion-input>
-
-          <label for="address" class="mt-2">Address:</label>
-          <ion-input id="address" name="address" placeholder="Address"></ion-input>
-
-          <label for="contact" class="mt-2">Contact:</label>
-          <ion-input id="contact" name="contact" type="tel" placeholder="Phone number"></ion-input>
-
-          <label for="email" class="mt-2">Email:</label>
-          <ion-input id="email" name="email" type="email" placeholder="Email"></ion-input>
-
-          <label for="medicalId" class="mt-2">Medical ID:</label>
-          <ion-input id="medicalId" name="medicalId" placeholder="Medical ID"></ion-input>
-
-        </form>
+      <div class="bg-white rounded-lg my-4 mx-3 md:mx-auto md:w-md">
+        <div class="bg-[#D9D9D9] p-2 rounded-t-lg mb-2 font-bold text-lg">
+          <p>Doctor's Information</p>
+        </div>
+        <div class="px-2">
+          <ion-label>Username:</ion-label>
+          <ion-input class="bg-[#D9D9D9] rounded-md p-2"/>
+        </div>
+        <div class="px-2">
+          <ion-label>Email</ion-label>
+          <ion-input class="bg-[#D9D9D9] rounded-md p-2"/>
+        </div>
+        <div class="px-2 pb-2">
+          <ion-label>Password</ion-label>
+          <ion-input class="bg-[#D9D9D9] rounded-md p-2"/>
+        </div>
+      </div>
+      <div class="my-4 mx-3 md:mx-auto flex justify-between items-center md:w-md gap-2">
+        <ion-button fill="clear" class="w-full mb-4 border border-black font-bold transition duration-300 ease-in-out text-sm rounded-lg hover:bg-[#023E8A] hover:text-white text-[#023E8A]">
+          Edit
+        </ion-button>
+        <ion-button fill="clear" class="w-full mb-4 border font-bold hover:bg-white hover:text-[#023E8A] hover:border-black hover:text-[#023E8A] transition duration-300 ease-in-out text-sm bg-[#023E8A] text-white rounded-lg">
+          Update
+        </ion-button>
       </div>
     </ion-content>
   </ion-page>
@@ -39,11 +37,10 @@
 
 <script setup lang="ts">
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue';
-import ExploreContainer from '@/components/ExploreContainer.vue';
 import Header from '@/components/Header.vue';
 </script>
 
-<style>
+<style scoped>
 ion-page{
     --background: #F0F0F0;
 }
@@ -59,5 +56,14 @@ ion-content{
     border-radius: 10px;
 }#form-container form{
   background-color: #D9D9D9;
+}
+ion-input{
+  --padding-start: 8px;
+  --padding-end: 8px;
+  --border-color: transparent;
+}
+ion-button{
+  --padding-start: none;
+  --padding-end: none;
 }
 </style>

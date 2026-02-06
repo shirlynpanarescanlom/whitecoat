@@ -2,7 +2,10 @@
   <ion-page>
     <ion-header>
       <ion-toolbar>
-        <Header/>
+        <div class="flex justify-between px-4 py-2">
+        <img src="../assets/logo/deped.png" alt="Logo" class="h-20 w-30">
+        <img src="../assets/logo/division.png" alt="Logo" class="h-20 w-20">
+      </div>
       </ion-toolbar>
     </ion-header>
     <ion-content class="ion-padding-bottom">
@@ -16,8 +19,8 @@
         <p class="text-5xl font-bold mb-5 mt-2 text-center">LOG IN</p>
         <form class="w-full">
           <div class="mb-4">
-            <input
-              class="mx-auto h-15 shadow bg-white rounded-full border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            <ion-input
+              class="custom-input mx-auto h-15 shadow bg-white rounded-full border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="username"
               type="text"
               placeholder="Enter your username"
@@ -27,12 +30,12 @@
             </label>
           </div>
           <div class="mb-6">
-            <input
-              class="mx-auto h-15 shadow bg-white rounded-full border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+            <ion-input
+              class="custom-input mx-auto h-15 shadow bg-white rounded-full border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
               id="password"
-              type="password"
-              placeholder="Enter your password"
-            />
+              placeholder="Enter your password">
+              <ion-input-password-toggle style="--color: black;" slot="end"></ion-input-password-toggle>
+              </ion-input>
             <label class="block text-gray-700 text-lg font-bold mb-2 mt-1" for="password">
               Password
             </label>
@@ -40,7 +43,8 @@
           <div class="mx-auto text-center">
             <ion-button 
              fill="clear"
-            class="w-30 rounded-full mb-4 mx-auto border border-black font-bold"
+             class="p-2 font-bold text-xl text-[#0034B7] rounded-full mb-4 mx-auto border border-black font-bold hover:bg-[#0034B7] hover:text-white transition duration-300 ease-in-out"
+             type="button"
             >
               Sign In
             </ion-button>
@@ -54,7 +58,6 @@
 
 
 <script setup lang="ts">
-import Header from '@/components/Header.vue';
 
 
 
@@ -63,5 +66,11 @@ import Header from '@/components/Header.vue';
 <style scoped>
 #archivo {
   font-family: 'Archivo Black', sans-serif;
+}
+.custom-input {
+  --highlight-color: none;
+  --padding-start: 10px;
+  --padding-end: 10px;
+  --color: black;
 }
 </style>

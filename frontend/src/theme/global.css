@@ -7,3 +7,9 @@ ion-page{
 ion-content{
     --background: #F0F0F0;
 }
+:root {
+  --ion-font-family: 'Archivo', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+p .title-font {
+  font-family: 'Archivo Black', sans-serif;
+}

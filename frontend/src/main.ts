@@ -37,9 +37,9 @@ import './theme/variables.css';
 // Font Awesome Integration
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import { faFileLines, faGear, faHome, faPrescription, faMagnifyingGlass, faCircleArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faFileLines, faGear, faHome, faPrescription, faMagnifyingGlass, faCircleArrowRight, faPlus } from '@fortawesome/free-solid-svg-icons';
 
-library.add(faPrescription, faFileLines, faHome, faGear, faMagnifyingGlass, faCircleArrowRight);
+library.add(faPrescription, faFileLines, faHome, faGear, faMagnifyingGlass, faCircleArrowRight, faPlus);
 
 const app = createApp(App)
   .use(IonicVue)

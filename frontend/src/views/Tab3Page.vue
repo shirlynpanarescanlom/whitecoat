@@ -6,31 +6,60 @@
       </ion-toolbar>
     </ion-header>
     <ion-content :fullscreen="true">
-      <div class=" w-full max-w-md mx-auto my-5 bg-gray-200 flex items-center justify-start
-      ">
+      <div id="form-container" class="title-font mx-2 md:mx-auto my-5 md:w-md">
+        <p class="text-center text-2xl font-bold">Medical Certificate</p>
+        <p class="text-center mb-2">Digital certificate for a patient</p>
+        <div class="bg-[#D9D9D9] p-4 rounded-lg mb-2">
         <form action="">
-          <label for="name">Name:</label>
-          <ion-input id="name" name="name" placeholder="Full name" class="w-full"></ion-input>
+          <div>
+            <p class="font-bold">Patient Information</p>
+          <div class="flex justify-between items-center gap-2">
+            <div>
+              <label for="name">Name:</label>
+              <ion-input id="name" name="name" placeholder="Full name"></ion-input>
+            </div>
+            <div>
+              <label for="age" class="mt-2">Age:</label>
+              <ion-input id="age" name="age" type="number" placeholder="Age"></ion-input>
+            </div>
+          </div>
 
-          <label for="age" class="mt-2">Age:</label>
-          <ion-input id="age" name="age" type="number" placeholder="Age"></ion-input>
+          <div class="flex justify-between items-center gap-2">
+            <div>
+              <label for="gender" class="mt-2">Gender:</label>
+              <ion-input id="gender" name="gender" placeholder="Gender"></ion-input>
+            </div>
+            <div>
+              <label for="address" class="mt-2">Date Issued:</label>
+              <ion-input id="address" name="address" type="date"></ion-input>
+            </div>
+          </div>
+           <div>
+            <label for="address" class="mt-2">Address:</label>
+            <ion-input id="address" name="address" placeholder="Address"></ion-input>
+           </div>
+          </div>
 
-          <label for="gender" class="mt-2">Gender:</label>
-          <ion-input id="gender" name="gender" placeholder="Gender"></ion-input>
-
-          <label for="address" class="mt-2">Address:</label>
-          <ion-input id="address" name="address" placeholder="Address"></ion-input>
-
-          <label for="contact" class="mt-2">Contact:</label>
-          <ion-input id="contact" name="contact" type="tel" placeholder="Phone number"></ion-input>
-
-          <label for="email" class="mt-2">Email:</label>
-          <ion-input id="email" name="email" type="email" placeholder="Email"></ion-input>
-
-          <label for="medicalId" class="mt-2">Medical ID:</label>
-          <ion-input id="medicalId" name="medicalId" placeholder="Medical ID"></ion-input>
-
+          <div class="mt-2">
+            <p class="font-bold">Clinical Information</p>
+           <div>
+            <label for="address" class="mt-2">Impression:</label>
+            <ion-input id="address" name="address" placeholder="Describe the patient’s clinical findings..."></ion-input>
+           </div>
+           <div>
+            <label for="address" class="mt-2">Remarks:</label>
+            <ion-input id="address" name="address" placeholder="Regard with attention..."></ion-input>
+           </div>
+          </div>
+          
         </form>
+        </div>
+        
+            <div class="flex justify-end mt-3">
+              <ion-button fill="clear" class="rounded-sm border border-black hover:bg-white hover:text-[#023E8A] transition duration-300 ease-in-out text-sm bg-[#023E8A] text-white normal-case">
+                Generate Prescription
+              </ion-button>
+            </div>
       </div>
     </ion-content>
   </ion-page>
@@ -42,8 +71,11 @@ import ExploreContainer from '@/components/ExploreContainer.vue';
 import Header from '@/components/Header.vue';
 </script>
 
-<style>
+<style scoped>
 ion-page{
+    --background: #F0F0F0;
+}
+ion-toolbar{
     --background: #F0F0F0;
 }
 ion-header{
@@ -51,5 +83,15 @@ ion-header{
 }
 ion-content{
     --background: #F0F0F0;
+}
+#form-container{
+    background-color: white;
+    padding: 10px 20px;
+}
+ion-input{
+    --background: white;
+    --border-radius: 2px;
+    --padding-start: 10px;
+    --padding-end: 10px;
 }
 </style>
