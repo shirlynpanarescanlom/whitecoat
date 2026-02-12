@@ -14,22 +14,22 @@
           <div>
             <p class="font-bold">Patient Information</p>
           <div class="flex justify-between items-center gap-2">
-            <div>
+            <div class="w-full">
               <label for="name">Name:</label>
               <ion-input id="name" name="name" placeholder="Full name"></ion-input>
             </div>
-            <div>
+            <div class="w-full">
               <label for="age" class="mt-2">Age:</label>
               <ion-input id="age" name="age" type="number" placeholder="Age"></ion-input>
             </div>
           </div>
 
           <div class="flex justify-between items-center gap-2">
-            <div>
+            <div class="w-full">
               <label for="gender" class="mt-2">Gender:</label>
               <ion-input id="gender" name="gender" placeholder="Gender"></ion-input>
             </div>
-            <div>
+            <div class="w-full">
               <label for="address" class="mt-2">Date Issued:</label>
               <ion-input id="address" name="address" type="date"></ion-input>
             </div>

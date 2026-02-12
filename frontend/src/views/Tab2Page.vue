@@ -14,11 +14,11 @@
           <div>
             <p class="font-bold">Patient Information</p>
           <div class="flex justify-between items-center gap-2">
-            <div>
+            <div class="w-full">
               <label for="name">Name:</label>
               <ion-input id="name" name="name" placeholder="Full name"></ion-input>
             </div>
-            <div>
+            <div class="w-full">
               <label for="age" class="mt-2">Age:</label>
               <ion-input id="age" name="age" type="number" placeholder="Age"></ion-input>
             </div>
@@ -120,5 +120,6 @@ ion-input{
     --border-radius: 2px;
     --padding-start: 10px;
     --padding-end: 10px;
+    --highlight-color: none;
 }
 </style>
