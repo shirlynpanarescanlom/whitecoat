@@ -72,17 +72,9 @@ import Header from '@/components/Header.vue';
 </script>
 
 <style scoped>
-ion-page{
+ion-page, ion-header, ion-toolbar, ion-content {
     --background: #F0F0F0;
-}
-ion-toolbar{
-    --background: #F0F0F0;
-}
-ion-header{
-    --background: #F0F0F0;
-}
-ion-content{
-    --background: #F0F0F0;
+    --color: #000000;
 }
 #form-container{
     background-color: white;

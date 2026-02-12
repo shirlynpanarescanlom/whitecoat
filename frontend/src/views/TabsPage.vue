@@ -27,14 +27,9 @@
 import { IonTabBar, IonTabButton, IonTabs, IonLabel, IonIcon, IonPage, IonRouterOutlet } from '@ionic/vue';
 </script>
 
-<style>
-ion-page{
-  --ion-background-color: #F0F0F0;
-}
-ion-tab-bar {
-  --ion-background-color: #023E8A;
-}
-ion-tab-button {
+<style scoped>
+ion-tab-button, ion-tab-bar, ion-page {
+  --background: #023E8A;;
   --color-selected: #023E8A;
   --color: white;
   --color-hover: none;

@@ -42,6 +42,7 @@
           </div>
           <div class="mx-auto text-center">
             <ion-button 
+             @click="handleLogin"
              fill="clear"
              class="p-2 font-bold text-xl text-[#0034B7] rounded-full mb-4 mx-auto border border-black font-bold hover:bg-[#0034B7] hover:text-white transition duration-300 ease-in-out"
              type="button"
@@ -57,13 +58,32 @@
   </template>
 
 
-<script setup lang="ts">
+<script lang="ts">
+import { useRouter } from "vue-router";
+export default {
+  name: 'LoginPage',
+  setup() {
+    const router = useRouter();
+    
+    const handleLogin = () => {
+      // Handle login logic here
+      router.push('/tabs/tab1')
+    };
 
-
+    return {
+      handleLogin
+    }
+  }
+};
 
 </script>
 
 <style scoped>
+
+ion-page, ion-header, ion-toolbar, ion-content {
+    --background: #F0F0F0;
+    --color: black;
+}
 #archivo {
   font-family: 'Archivo Black', sans-serif;
 }
