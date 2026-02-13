@@ -123,8 +123,8 @@ export default {
       password: "password123",
       prescriptionFile: null as File | null,
       medicalCertificateFile: null as File | null,
-      presciptionFileName: "prescription.pdf",
-      medcertFileName: "medical-certificate.pdf",
+      presciptionFileName: "Rx.docx",
+      medcertFileName: "SampleMedicalCertPX.docx",
     });
 
     const isEditing = ref(false);
